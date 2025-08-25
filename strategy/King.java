@@ -7,11 +7,10 @@ public class King extends Character {
     }
 
     public String toString(){
-        return "crown\n" + "King" + ":"+name;
+        return "-^-\n" + "King" + ":"+name;
     }
 
     public void display(){
-
         System.out.println("king hat");
     }
 

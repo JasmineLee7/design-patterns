@@ -14,7 +14,7 @@ public class MedievalDriver {
         while(true){
             Character character = getCharacter();
             Resources.clear();
-            System.out.println(character);
+            System.out.println(character.toString());
 
             character.setWeaponBehavior(getWeaponBehavior());
 
@@ -26,10 +26,11 @@ public class MedievalDriver {
         }
 
         System.out.println("Goodbye");
-    }
+    } 
 
     public WeaponBehavior getWeaponBehavior(){
         while(true) {
+
             System.out.println("Which weapon would you like: ");
             System.out.println("1. Bow");
             System.out.println("2. Knife");

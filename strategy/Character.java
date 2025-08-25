@@ -19,8 +19,8 @@ public abstract class Character {
         weaponBehavior.attack();
     }
 
-    public String toString(){
-        return "";
+    public String toString(Character charecter){
+        return charecter.toString();
     }
 
 }
