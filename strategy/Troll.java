@@ -7,7 +7,7 @@ public class Troll extends Character{
     }
 
     public String toString(){
-        return "";
+        return "troll hat\n" + "Troll" + ":"+name;
     }
 
     public void display(){

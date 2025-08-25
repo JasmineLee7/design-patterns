@@ -7,7 +7,7 @@ public class King extends Character {
     }
 
     public String toString(){
-        return "";
+        return "crown\n" + "King" + ":"+name;
     }
 
     public void display(){

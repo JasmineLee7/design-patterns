@@ -7,7 +7,7 @@ public class Knight extends Character {
     }
 
     public String toString(){
-        return "";
+        return "little cown\n" + "Knight" + ":"+name;
     }
 
     public void display(){

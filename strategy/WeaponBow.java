@@ -7,8 +7,17 @@ public class WeaponBow implements WeaponBehavior {
 
 
     public void attack() {
-        System.out.println(")");
-        System.out.print("-->");
-    }
+        final int screenWidth = 125; 
 
+        for (int i = 0; i <= screenWidth; i++) {
+            Resources.clear();
+            System.out.print(bow); // bow behind the arrow
+
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+            System.out.println(arrow); 
+            Resources.sleep(30);
+    }
+    }
 }

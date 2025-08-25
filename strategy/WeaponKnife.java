@@ -6,17 +6,17 @@ public class WeaponKnife implements WeaponBehavior {
     protected int screenWidth = 125;
 
     public void attack() {
-    System.out.println("/----");
+        final int screenWidth = 125; // works on my screen!
 
-    for(int i=0; i<=screenWidth; i++){
-        Resources.clear();
+        for (int i = 0; i <= screenWidth; i++) {
+            Resources.clear(); // clears behind knife
 
-        for(int j=0; j<i;j++){
-            System.out.println("");
-        }
-        System.out.print(knife);
-        Resources.sleep(50);
+            for (int j = 0; j < i; j++) { // moves the knife
+                System.out.print(" ");
+            }
+            System.out.println(knife);
+            Resources.sleep(30); // slows down knife
     }
-    
+
     }
 }
