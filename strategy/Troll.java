@@ -1,4 +1,5 @@
 package strategy;
+// Jasmine Lee - Aug 2025
 
 public class Troll extends Character{
     
@@ -6,11 +7,8 @@ public class Troll extends Character{
         super(name); 
     }
 
-    public String toString(){
+    public String toString(){  // displays character information
         return "(^)\n" + "Troll" + ":"+name;
     }
 
-    public void display(){
-        System.out.println("troll hat");
-    }
 }

@@ -1,4 +1,5 @@
 package strategy;
+// Jasmine Lee - Aug 2025
 
 public class King extends Character {
     
@@ -6,12 +7,7 @@ public class King extends Character {
         super(name); 
     }
 
-    public String toString(){
+    public String toString(){ // displays character information
         return "-^-\n" + "King" + ":"+name;
     }
-
-    public void display(){
-        System.out.println("king hat");
-    }
-
 }

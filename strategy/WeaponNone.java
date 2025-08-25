@@ -1,4 +1,5 @@
 package strategy;
+// Jasmine Lee - Aug 2025
 
 public class WeaponNone implements WeaponBehavior {
 

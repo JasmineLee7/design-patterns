@@ -1,4 +1,5 @@
 package strategy;
+// Jasmine Lee - Aug 2025
 
 public class WeaponBow implements WeaponBehavior {
     
@@ -7,7 +8,7 @@ public class WeaponBow implements WeaponBehavior {
 
 
     public void attack() {
-        final int screenWidth = 125; 
+        final int screenWidth = 125; // works good enough
 
         for (int i = 0; i <= screenWidth; i++) {
             Resources.clear();
