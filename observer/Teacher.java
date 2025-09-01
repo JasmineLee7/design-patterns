@@ -3,7 +3,6 @@ package observer;
  * Teacher class implimented from observer responds to the subjects notification
  */
 public class Teacher implements Observer {
-    
      /*
      * creates a Knight and registers it with information
      * @param watchman for the warning of subjects

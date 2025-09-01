@@ -1,7 +1,6 @@
 package observer;
 
 public class Knight implements Observer {
-
     /*
      * creates a Knight and registers it with information
      * @param watchman for the warning of subjects
