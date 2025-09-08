@@ -16,7 +16,7 @@ public class Vanilla extends ScoopDecorator {
      * Sets the color for this flavor (white).
      * @return ANSI code for white
      */
-    protected String flavorColor() { 
+    protected String getColour() { 
         return ANSI_WHITE; 
     }
 }

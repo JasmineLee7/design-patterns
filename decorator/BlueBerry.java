@@ -16,7 +16,7 @@ public class BlueBerry extends ScoopDecorator {
      * Sets the color for this flavor (blue).
      * @return ANSI code for blue
      */
-    protected String flavorColor() {
+    protected String getColour() {
          return ANSI_BLUE;
     }
 }

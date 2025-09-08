@@ -16,7 +16,7 @@ public class Strawberry extends ScoopDecorator {
      * Sets the color for this flavor (red).
      * @return ANSI code for red
      */
-    protected String flavorColor() { 
+    protected String getColour() { 
         return ANSI_RED; 
     }
 }
