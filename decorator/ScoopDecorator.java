@@ -2,11 +2,13 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
+
 /**
 * ScoopDecorator is the abstract class for all scoop flavors. 
 * It stacks scoops on top of an IceCream (like Cone) and adds color. 
 * Handles the ASCII art so the scoops line up nicely.
 */
+
 public abstract class ScoopDecorator extends IceCream {
 
    protected IceCream iceCream;      
@@ -58,7 +60,6 @@ public abstract class ScoopDecorator extends IceCream {
     * @return ANSI color code for the scoop
     */
    protected abstract String getColour();
-
 
    // makes a string of the same character repeated
    private static String repeat(char ch, int n) {

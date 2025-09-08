@@ -16,9 +16,9 @@ public class TownDriver {
 		System.out.println("A Happy Little City");
 		Watchman watchman = new Watchman();
 		Greeter greeter = new Greeter();
-		Observer shopOwner = new ShopOwner(watchman, greeter);
-		Observer teacher = new Teacher(watchman, greeter);
-		Observer knight = new Knight(watchman, greeter);
+		//Observer shopOwner = new ShopOwner(watchman, greeter);
+		//Observer teacher = new Teacher(watchman, greeter);
+		//Observer knight = new Knight(watchman, greeter);
 		
 		while(true){
 			int notice = getNotice();
