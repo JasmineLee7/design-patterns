@@ -16,50 +16,47 @@ public abstract class ScoopDecorator extends IceCream {
    private static final Pattern ANSI_RE = Pattern.compile("\u001B\\[[;\\d]*m");
    private static int index = -1;
 
+   /**
+    * Builds a scoop (or multiple) on top of an ice cream. 
+    * Figures out spacing, colors the scoop, and centers it
+    * @param iceCream the ice cream we’re decorating
+    * @param numScoops how many scoops of this flavor to add
+    */
+    public ScoopDecorator(IceCream iceCream, int numScoops) {
+        this.iceCream = iceCream;
+        this.numFlavorScoops = Math.max(0, numScoops);
+        this.numScoops = iceCream.numScoops + this.numFlavorScoops;
+ 
+        int frameWidth = Math.max(maxWidth(iceCream.asciiArt), width(index));
+ 
+        ArrayList<String> mine = new ArrayList<>();
+ 
+        for (int i = 0; i < this.numFlavorScoops; i++){
+            int index1 = index - (this.numFlavorScoops - 1 - i);
+            int dashes = Math.max(0, index1) * 2;
+            String scoop = "(" + repeat('-', dashes) + ")";
+            String colored = getColour() + scoop + ANSI_RESET;
+            mine.add(center(colored, frameWidth));
+        }
+        index -= this.numFlavorScoops;
+ 
+        this.asciiArt.addAll(mine);
+        this.asciiArt.addAll(iceCream.asciiArt);
+    }
+    
     /**
     * Sets up where scoops will be placed before building them. 
     * @param totalScoops total number of scoops in the whole ice cream
     */
-   public static void setUp(int totalScoops) {
-       index = Math.max(0, totalScoops - 1);
-   }
+    public static void setUp(int totalScoops){
+    index = Math.max(0, totalScoops - 1);
+    }
 
-   /**
-    * Builds a scoop (or multiple) on top of an ice cream. 
-    * Figures out spacing, colors the scoop, and centers it.
-    * @param iceCream the ice cream we’re decorating
-    * @param numScoops how many scoops of this flavor to add
-    */
-   public ScoopDecorator(IceCream iceCream, int numScoops) {
-       this.iceCream = iceCream;
-       this.numFlavorScoops = Math.max(0, numScoops);
-       this.numScoops = iceCream.numScoops + this.numFlavorScoops;
-
-       int frameWidth = Math.max(
-           maxWidth(iceCream.asciiArt),
-           width(index)
-       );
-
-       ArrayList<String> mine = new ArrayList<>();
-
-       for (int i = 0; i < this.numFlavorScoops; i++) {
-           int index1 = index - (this.numFlavorScoops - 1 - i);
-           int dashes = Math.max(0, index1) * 2;
-           String scoop = "(" + repeat('-', dashes) + ")";
-           String colored = getColour() + scoop + ANSI_RESET;
-           mine.add(center(colored, frameWidth));
-       }
-       index -= this.numFlavorScoops;
-
-       this.asciiArt.addAll(mine);
-       this.asciiArt.addAll(iceCream.asciiArt);
-   }
-
-   /**
+    /**
     * Each scoop flavor sets its own color. 
     * @return ANSI color code for the scoop
     */
-   protected abstract String getColour();
+    protected abstract String getColour();
 
    // makes a string of the same character repeated
    private static String repeat(char ch, int n) {
