@@ -1,3 +1,4 @@
+// Jasmine Lee
 /**
  * Strawberry is a scoop flavor.  
  * Extends ScoopDecorator and gives the scoop a red color. 

@@ -1,3 +1,4 @@
+// Jasmine Lee
 /**
  * Vanilla is another scoop flavor.  
  * Extends ScoopDecorator and gives the scoop a white color. 

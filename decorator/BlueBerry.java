@@ -1,3 +1,4 @@
+// Jasmine Lee
 /**
  * BlueBerry is one of the scoop flavors.  
  * It extends ScoopDecorator and just gives the scoop a blue color. 
