@@ -2,17 +2,16 @@ package state;
 
 import java.util.Random;
 
-public class State {
-    protected Package pkg = new Package();
-    protected Random random = new Random();
+public abstract class State {
+    protected Package pkg;
+    protected Random random;
 
-    public void State(Package pkg){}
-
-    public String getStatus(){
-        return "";
+    public State(Package pkg){
+        this.pkg = pkg;
+        this.random = new Random();
     }
 
-    public String getETA(){
-        return "";
-    }
+    public abstract String getStatus();
+
+    public abstract String getETA();
 }

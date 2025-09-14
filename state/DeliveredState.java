@@ -1,14 +1,16 @@
 package state;
 
-public class DeliveredState {
+public class DeliveredState extends State {
     
-    public DeliveredState(Package pkg){}
+    public DeliveredState(Package pkg){
+        super(pkg);
+    }
 
     public String getStatus(){
-        return "";
+        return ("The "+pkg.getName()+" arrived");
     }
 
     public String getETA(){
-        return "";
+        return ("The "+pkg.getName()+" here");
     }
 }

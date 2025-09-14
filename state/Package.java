@@ -3,31 +3,43 @@ package state;
 public class Package {
     private String name;
     private int quantity;
-    OrderedState orderedState = new OrderedState();
-    DeliveredState deliveredState = new DeliveredState();
+    OrderedState orderedState;
+    DeliveredState deliveredState;
+    InTransitState inTransitState;
 
-    public void Package(String name, int quantity){}
+    public Package(String name, int quantity){
+        this.quantity = quantity;
+        this.name = name;
+
+        orderedState = new OrderedState(this);
+        deliveredState = new DeliveredState(this);
+        inTransitState = new InTransitState(this);
+    }
 
     public String order(){
-        return "";
+        return (orderedState.getStatus()+"\n"+orderedState.getETA());
     }
 
     public String mail(){
-        return "";
+        return (inTransitState.getStatus()+"\n"+inTransitState.getETA());
     }
-
-    public String recieved(){
-        return "";
+    
+    public String received(){
+        return (deliveredState.getStatus()+"\n"+deliveredState.getETA());
     }
 
     public void setState(State state){}
 
     public String getName(){
-        return "";
+        return name;
     }
 
     public String getVerb(String singular, String plural){
-        return "";
+        if(quantity==1){
+            return singular;
+        }
+        else{
+            return plural;
+        }
     }
-
 }

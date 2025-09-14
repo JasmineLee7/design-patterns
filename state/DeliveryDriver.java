@@ -18,11 +18,11 @@ public class DeliveryDriver {
 			System.out.print("What would you like to order: ");
 			Package item = new Package(reader.nextLine(), getNumItem());
 			System.out.println("\nOrdering:\n" + item.order());
-			sleep(5000);
+			//sleep(5000);
 			System.out.println("\nMailing:\n" + item.mail());
-			sleep(5000);
+			//sleep(5000);
 			System.out.println("\nDelivery\n" + item.received());
-			sleep(5000);
+			//sleep(5000);
 
 			if(!playAgain()) break;
 		}
