@@ -8,22 +8,22 @@ public class InTransitState extends State{
     }
 
     public String getStatus(){
-        return ("The "+pkg.getName()+" VERB in transit");
+        return ("The "+pkg.getName()+pkg.getVerb(" is","'s are")+" in transit");
     }
 
     public String getETA(){
         int delayChance = random.nextInt(10);
-        int delayLength = random.nextInt(7);
-        
+        int delayLength = random.nextInt(7)+1;
+       
         // 30% chance
         if(delayChance<=2){
             days = days+delayLength;
-            String delayMessage = "The <Package Name> <verb> experienced a delay in shipping";
-            String message = "message: The <Package Name> should arrive within "+days+" business days.";
-            return ("\n"+delayMessage+"\n"+message);
+            String delayMessage = ("The "+pkg.getName()+pkg.getVerb(" has","'s have")+" experienced a delay in shipping");
+            String message = ("The "+pkg.getName()+pkg.getVerb("","'s")+" should arrive within "+days+" business days.");
+            return (delayMessage+"\n"+message);
         }
         else{
-            return ("The package will be shipped within "+days+" business days");
+            return ("The "+pkg.getName()+pkg.getVerb("","'s")+" will arrive within "+days+" business days");
         }
     }
 }

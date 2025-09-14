@@ -4,9 +4,9 @@ public class Package {
     private String name;
     private int quantity;
     OrderedState orderedState;
-    DeliveredState deliveredState;
     InTransitState inTransitState;
-
+    DeliveredState deliveredState;
+   
     public Package(String name, int quantity){
         this.quantity = quantity;
         this.name = name;
