@@ -26,7 +26,7 @@ public class DataLoader {
         Path songPath = path.resolve("songs");
         boolean hasSongPath = Files.isDirectory(songPath);
 
-        try {
+        try { 
             List<String> lines = Files.readAllLines(txt);
             for (String raw : lines) {
                 String line = raw.trim();
