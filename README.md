@@ -1,1 +1,1 @@
-# design-patterns
+# Small programs from Software Engineering course
